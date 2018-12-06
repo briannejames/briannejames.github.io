@@ -1,0 +1,429 @@
+
+
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+  font-size:100%;
+  font-family: "Arial", Helvetica, sans-serif;
+  background-color: #e5e5e5;
+
+}
+
+hr { /*line break used to adjust spacing between white section and blue section*/
+  width: 100%;
+  height: 0;
+  border: none;
+}
+
+
+/****************************************THIS IS TO STYLE THE HEADER***************************/
+
+/****start of header syling****/
+
+.header {  /*to style the entire header*/
+      font-family: "Arial", Helvetica, sans-serif; /*backup fonts*/
+      color: ##000000; /*black*/
+      background: white;
+      width: 100%
+      padding: 0px;
+      margin: -10px;
+    }
+
+
+/*to style the header links*/
+
+    
+.header-left { /*to float the left side of the header against the entire header*/
+  float: left;
+  margin-left:3em;
+  margin-top: 1em;
+    }
+
+#logo-img { /*to float the "ryerson student portal" against the logo*/
+  width: 5em;
+  float: left;
+}
+
+#portal-name { /*to float the "ryerson student portal" against the logo*/
+  float: right;
+  margin-left: 1em;
+
+}
+
+.tab { /*to style the individual buttons on the right side of the header:*/
+  background-color: #e5e5e5;
+  font-weight: bold;
+}
+
+.header-right { /*to float the right side of the header against the entire header*/
+  float: right;
+  margin-right: 3em;
+  margin-top:1em;
+}
+
+.header-right a { /*to style the individual button links on the right*/
+  float: left; 
+  color: black;
+  padding: 12px;
+  text-decoration: none; /*to remove default hyperlink style*/
+  font-size: 14px; 
+  line-height: 25px;
+  border-radius: 0px;
+  margin: 1px;
+}
+
+.header-right a:hover { /*to change style when hovered on the header link*/
+  background-color: white;
+  color: black;
+  } 
+
+
+#langauge { /*style the language button*/
+  font-weight: bold;
+}
+
+.blue-bar { /*stule the bblue bar below the header*/
+  width: 100%;
+  height: 40px;
+  background-color: #004c9b;
+  display: block;
+}
+
+/*to style the language drop down*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e5e5e5;
+  width: 71%; 
+  }
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+/***end of header style*/
+
+/***************************************PAGE ONE*************************************************/
+
+
+#diversestudents{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding-top: 10px;
+}
+
+#wrapper {
+
+}
+
+/* SEARCH BAR STARTS HERE */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  position: relative;
+  transform: translate(410px, -300px);
+  padding: 10px;
+  font-size: 17px;
+  border: 1px white;
+  float: left;
+  width: 30%;
+  background: #f1f1f1;
+
+}
+
+/* Style the submit button */
+form.example button {
+  position: relative;
+  transform: translate(410px, -300px);
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #004c9b;
+  color: white;
+  font-size: 17px;
+  border: 1px  #004c9b;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* SEARCH BAR ENDS HERE */
+
+
+  /*********************THIS IS TO STYLE THE SECTION-2 (Jobs For You) **********************/
+
+.main-title {
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+#section-2 { /*flex wrap puts all the images side-by-side but responsive*/
+  display: flex;
+  flex-wrap: wrap;
+margin-left: 3em;
+margin-right: 3em;
+justify-content: center;
+}
+
+/*Container styles each image in the food grid; 
+contains all content related sub-classes*/
+
+.container{
+  padding: 1em 0em;
+  float: left;
+  width: 28%;
+}
+
+
+/*to ensure images are positioned relative to each other; 
+to set a responsive width for each image with a max;
+to auto adjust the margins when screen is readjusted*/
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+
+/*to style the overlay box; */
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute; /*overlay doesn't appear without this; */
+  height: 99%; /*overlay goes over image at 100% */
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0; /*so that the overlay is invisible initially */
+  -webkit-transition: all 0.4s ease-in-out 0s; /*for safari and chrome */
+  -moz-transition: all 0.4s ease-in-out 0s; /*for Firefox */
+  transition: all 0.4s ease-in-out 0s; /*general */
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+
+/*for text hovering over image */
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%); /*final position on x and y axis */
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+/*when you hover over content, item moves from top, center and appears in sight */
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+
+/*to style h3 within content-details */
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+
+
+.fadeIn-top{
+  top: 40%;
+}
+
+  /*********************THIS IS TO STYLE THE SECTION-3 (You Might Like) **********************/
+
+#Jobbox{
+	background-color:white;
+	position: relative;
+	left:170px;
+	bottom:-30px;
+	width:76%;
+	height:150px;
+}
+
+#DG8004title{
+color:black;
+position:relative; 
+left:20px;
+bottom:-25px;
+width:600px;
+height:100px;
+font-size: 18px; 
+text-align:left;
+}
+
+#Jobid{
+color:black;
+position:relative;
+left:20px;
+bottom:20px;
+width:170px;
+font-size:16px;
+text-align:left;}
+
+#JobFam{
+	color:black;
+	position:relative;
+	left:20px;
+	bottom:20px;
+	width:250px;
+	height:50px;
+	font-size:16px;
+	text-align:left;
+}
+
+#ShowingJobs {
+	color:black;
+	position:relative;
+	top:10px;
+	left:460px;
+	font-size: 14px;
+	}
+
+/***************************************THIS IS TO STYLE THE FOOTER HERE*************************************************/
+
+
+#footer-top{ /*style of first light blue bar containing youtube links*/
+	width: 100%;
+	position: relative;
+	left: -8px;
+	padding: 30px;
+	background-color: #004C9B;
+	color: white;
+	font-size: 14px; 
+	line-height: 25px;
+}
+
+#f2 { /*create space between the youtube boxes*/
+  margin-left: 2em;
+  align-content: center;
+}
+
+#footer-middle { /*style of dark blue bar containing ryerson address*/
+  width: 100%;
+  position: relative;
+  left:-8px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #002954;
+  color: white;
+  font-size: 14px; 
+  line-height: 15px;
+
+
+}
+
+
+#footer-img { /*social media footer image*/
+  width: 50%;
+  position: relative;
+  left: 100px;
+}
+
+#footer-bottom { /*light blue bar containing terms and conditions*/
+   width: 100%;
+   position: relative;
+   left:-8px;
+   padding: 30px;
+  background-color: #004C9B;
+  font-size: 14px; 
+  line-height: 25px;
+  color: white;
+ }
+
+ .terms {
+ 	position: relative;
+ 	left:-49px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.terms a{
+  float: left;
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.terms a:link { 
+  color: white;
+}
+.terms a:visited {
+  color: white;
+}
+
+.directory a:link { 
+  text-decoration: none;
+  list-style-type: none;
+  padding: 10px;
+  margin-left:0px;
+  color: white;
+  float:left;
+  text-align: left;
+}
+
+.directory a:visited {
+  color: white;
+}
